@@ -2,6 +2,7 @@
 #define FINDWIDGETINSIDEDIALOG_H
 
 #include <QDialog>
+#include <QPropertyAnimation>
 
 namespace Ui {
 class FindWidgetDialog;
@@ -13,13 +14,14 @@ class FindWidgetDialog : public QDialog
 
 public:
     explicit FindWidgetDialog(QWidget *targetWidget,
-                                    QWidget *parent = 0);
+                              const QString &findLabelText = tr("Find:"),
+                              QWidget *parent = 0);
     ~FindWidgetDialog();
 
 private:
     Ui::FindWidgetDialog *ui;
+    QPropertyAnimation *m_closeAnimation = nullptr;
 
-    // QWidget interface
 protected:
     void mousePressEvent(QMouseEvent *event);
 };

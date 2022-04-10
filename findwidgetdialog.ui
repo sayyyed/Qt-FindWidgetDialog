@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>538</width>
-    <height>199</height>
+    <width>542</width>
+    <height>209</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,7 +23,8 @@ background-color: white;
 #lineEdit{
 border: 1px solid gray;
 border-radius: 5px;
-padding: 3px;
+padding-top: 5px;
+padding-bottom: 5px;
 }
 
 #outerFrame{
@@ -31,6 +32,18 @@ background-color: rgba(0, 0, 0, 3)
 }</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
    <item row="0" column="0" colspan="2">
     <widget class="QFrame" name="outerFrame">
      <property name="styleSheet">
@@ -43,12 +56,12 @@ background-color: rgba(0, 0, 0, 3)
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
+      <item alignment="Qt::AlignTop">
        <widget class="QFrame" name="innerFrame">
         <property name="maximumSize">
          <size>
           <width>400</width>
-          <height>50</height>
+          <height>80</height>
          </size>
         </property>
         <property name="styleSheet">
@@ -62,7 +75,7 @@ background-color: rgba(0, 0, 0, 3)
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="findLabel">
            <property name="text">
             <string>Find:</string>
            </property>
