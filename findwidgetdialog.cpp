@@ -214,7 +214,7 @@ FindWidgetDialog::FindWidgetDialog(QWidget *targetWidget,
                     if(groupBox && !groupBox->title().isEmpty())
                         text = groupBox->title();
                 }
-                if(childWidget->inherits("QTextEdit"))
+                else if(childWidget->inherits("QTextEdit"))
                 {
                     QTextEdit *childTextEdit = qobject_cast<QTextEdit*>(childWidget);
                     if(childTextEdit && !childTextEdit->placeholderText().isEmpty())
